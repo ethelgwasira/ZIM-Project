@@ -17,8 +17,8 @@ mpl.rcParams['pdf.fonttype'] = 42
 SetupParser.default_block = 'LOCAL'
 
 user = os.getlogin()  # user initials
-expt_name = 'ZBOOK_FE_2022_example_Mozambique_smallpop'
-expt_id = '2022_06_13_18_33_59_638912' ## change expt_id
+expt_name = 'ZBOOK_ZIM-project_Zimbabwe'
+expt_id = '2022_07_02_03_00_59_746515' ## change expt_id
 working_dir = os.path.join('simulation_outputs')
 
 if __name__ == "__main__":
