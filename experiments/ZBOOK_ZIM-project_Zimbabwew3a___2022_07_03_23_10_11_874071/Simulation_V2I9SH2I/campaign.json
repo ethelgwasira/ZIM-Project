@@ -1,0 +1,392 @@
+{
+   "Campaign_Name": "Empty Campaign",
+   "Events": [
+      {
+         "Event_Coordinator_Config": {
+            "Intervention_Config": {
+               "Actual_IndividualIntervention_Config": {
+                  "Actual_IndividualIntervention_Configs": [
+                     {
+                        "Cost_To_Consumer": 1,
+                        "Drug_Type": "Artemether",
+                        "class": "AntimalarialDrug"
+                     },
+                     {
+                        "Cost_To_Consumer": 1,
+                        "Drug_Type": "Lumefantrine",
+                        "class": "AntimalarialDrug"
+                     },
+                     {
+                        "Broadcast_Event": "Received_Treatment",
+                        "class": "BroadcastEvent"
+                     }
+                  ],
+                  "Delay_Period_Distribution": "EXPONENTIAL_DISTRIBUTION",
+                  "Delay_Period_Exponential": 3.3333333333333335,
+                  "class": "DelayedIntervention"
+               },
+               "Demographic_Coverage": 0.7,
+               "Target_Age_Max": 5,
+               "Target_Demographic": "ExplicitAgeRanges",
+               "Trigger_Condition_List": [
+                  "NewClinicalCase"
+               ],
+               "class": "NodeLevelHealthTriggeredIV"
+            },
+            "Timesteps_Between_Repetitions": 365,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 0,
+         "class": "CampaignEvent"
+      },
+      {
+         "Event_Coordinator_Config": {
+            "Intervention_Config": {
+               "Actual_IndividualIntervention_Config": {
+                  "Actual_IndividualIntervention_Configs": [
+                     {
+                        "Cost_To_Consumer": 1,
+                        "Drug_Type": "Artemether",
+                        "class": "AntimalarialDrug"
+                     },
+                     {
+                        "Cost_To_Consumer": 1,
+                        "Drug_Type": "Lumefantrine",
+                        "class": "AntimalarialDrug"
+                     },
+                     {
+                        "Broadcast_Event": "Received_Treatment",
+                        "class": "BroadcastEvent"
+                     }
+                  ],
+                  "Delay_Period_Distribution": "EXPONENTIAL_DISTRIBUTION",
+                  "Delay_Period_Exponential": 3.3333333333333335,
+                  "class": "DelayedIntervention"
+               },
+               "Demographic_Coverage": 0.5,
+               "Target_Age_Max": 100,
+               "Target_Age_Min": 5,
+               "Target_Demographic": "ExplicitAgeRanges",
+               "Trigger_Condition_List": [
+                  "NewClinicalCase"
+               ],
+               "class": "NodeLevelHealthTriggeredIV"
+            },
+            "Timesteps_Between_Repetitions": 365,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 0,
+         "class": "CampaignEvent"
+      },
+      {
+         "Event_Coordinator_Config": {
+            "Intervention_Config": {
+               "Actual_IndividualIntervention_Config": {
+                  "Actual_IndividualIntervention_Configs": [
+                     {
+                        "Cost_To_Consumer": 1,
+                        "Drug_Type": "Artemether",
+                        "class": "AntimalarialDrug"
+                     },
+                     {
+                        "Cost_To_Consumer": 1,
+                        "Drug_Type": "Lumefantrine",
+                        "class": "AntimalarialDrug"
+                     },
+                     {
+                        "Broadcast_Event": "Received_Severe_Treatment",
+                        "class": "BroadcastEvent"
+                     }
+                  ],
+                  "Delay_Period_Distribution": "EXPONENTIAL_DISTRIBUTION",
+                  "Delay_Period_Exponential": 2.0,
+                  "class": "DelayedIntervention"
+               },
+               "Demographic_Coverage": 0.49,
+               "Target_Age_Max": 125,
+               "Trigger_Condition_List": [
+                  "NewSevereCase"
+               ],
+               "class": "NodeLevelHealthTriggeredIV"
+            },
+            "Timesteps_Between_Repetitions": 365,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 0,
+         "class": "CampaignEvent"
+      },
+      {
+         "Event_Coordinator_Config": {
+            "Intervention_Config": {
+               "Intervention_List": [
+                  {
+                     "Bednet_Type": "ITN",
+                     "Blocking_Config": {
+                        "Decay_Time_Constant": 730,
+                        "Initial_Effect": 0.9,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Cost_To_Consumer": 0,
+                     "Killing_Config": {
+                        "Decay_Time_Constant": 1460,
+                        "Initial_Effect": 0.6,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Repelling_Config": {
+                        "Decay_Time_Constant": 1460,
+                        "Initial_Effect": 0,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Usage_Config": {
+                        "Expected_Discard_Time": 3650,
+                        "class": "WaningEffectRandomBox"
+                     },
+                     "class": "SimpleBednet"
+                  },
+                  {
+                     "Broadcast_Event": "Received_ITN",
+                     "class": "BroadcastEvent"
+                  }
+               ],
+               "class": "MultiInterventionDistributor"
+            },
+            "Number_Repetitions": 5,
+            "Target_Age_Max": 10,
+            "Target_Demographic": "ExplicitAgeRanges",
+            "Target_Residents_Only": 1,
+            "Timesteps_Between_Repetitions": 1095,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 366,
+         "class": "CampaignEvent"
+      },
+      {
+         "Event_Coordinator_Config": {
+            "Demographic_Coverage": 0.75,
+            "Intervention_Config": {
+               "Intervention_List": [
+                  {
+                     "Bednet_Type": "ITN",
+                     "Blocking_Config": {
+                        "Decay_Time_Constant": 730,
+                        "Initial_Effect": 0.9,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Cost_To_Consumer": 0,
+                     "Killing_Config": {
+                        "Decay_Time_Constant": 1460,
+                        "Initial_Effect": 0.6,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Repelling_Config": {
+                        "Decay_Time_Constant": 1460,
+                        "Initial_Effect": 0,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Usage_Config": {
+                        "Expected_Discard_Time": 3650,
+                        "class": "WaningEffectRandomBox"
+                     },
+                     "class": "SimpleBednet"
+                  },
+                  {
+                     "Broadcast_Event": "Received_ITN",
+                     "class": "BroadcastEvent"
+                  }
+               ],
+               "class": "MultiInterventionDistributor"
+            },
+            "Number_Repetitions": 5,
+            "Target_Age_Max": 50,
+            "Target_Age_Min": 10,
+            "Target_Demographic": "ExplicitAgeRanges",
+            "Target_Residents_Only": 1,
+            "Timesteps_Between_Repetitions": 1095,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 366,
+         "class": "CampaignEvent"
+      },
+      {
+         "Event_Coordinator_Config": {
+            "Demographic_Coverage": 0.6,
+            "Intervention_Config": {
+               "Intervention_List": [
+                  {
+                     "Bednet_Type": "ITN",
+                     "Blocking_Config": {
+                        "Decay_Time_Constant": 730,
+                        "Initial_Effect": 0.9,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Cost_To_Consumer": 0,
+                     "Killing_Config": {
+                        "Decay_Time_Constant": 1460,
+                        "Initial_Effect": 0.6,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Repelling_Config": {
+                        "Decay_Time_Constant": 1460,
+                        "Initial_Effect": 0,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Usage_Config": {
+                        "Expected_Discard_Time": 3650,
+                        "class": "WaningEffectRandomBox"
+                     },
+                     "class": "SimpleBednet"
+                  },
+                  {
+                     "Broadcast_Event": "Received_ITN",
+                     "class": "BroadcastEvent"
+                  }
+               ],
+               "class": "MultiInterventionDistributor"
+            },
+            "Number_Repetitions": 5,
+            "Target_Age_Max": 125,
+            "Target_Age_Min": 50,
+            "Target_Demographic": "ExplicitAgeRanges",
+            "Target_Residents_Only": 1,
+            "Timesteps_Between_Repetitions": 1095,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 366,
+         "class": "CampaignEvent"
+      },
+      {
+         "Event_Coordinator_Config": {
+            "Intervention_Config": {
+               "Intervention_List": [
+                  {
+                     "Blocking_Config": {
+                        "Decay_Time_Constant": 730,
+                        "Initial_Effect": 0.0,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Cost_To_Consumer": 1,
+                     "Killing_Config": {
+                        "Box_Duration": 60,
+                        "Decay_Time_Constant": 120,
+                        "Initial_Effect": 0.6,
+                        "class": "WaningEffectBoxExponential"
+                     },
+                     "class": "IRSHousingModification"
+                  },
+                  {
+                     "Broadcast_Event": "Received_IRS",
+                     "class": "BroadcastEvent"
+                  }
+               ],
+               "class": "MultiInterventionDistributor"
+            },
+            "Target_Age_Max": 10,
+            "Target_Demographic": "ExplicitAgeRanges",
+            "Target_Residents_Only": 1,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 366,
+         "class": "CampaignEvent"
+      },
+      {
+         "Event_Coordinator_Config": {
+            "Demographic_Coverage": 0.75,
+            "Intervention_Config": {
+               "Intervention_List": [
+                  {
+                     "Blocking_Config": {
+                        "Decay_Time_Constant": 730,
+                        "Initial_Effect": 0.0,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Cost_To_Consumer": 1,
+                     "Killing_Config": {
+                        "Box_Duration": 60,
+                        "Decay_Time_Constant": 120,
+                        "Initial_Effect": 0.6,
+                        "class": "WaningEffectBoxExponential"
+                     },
+                     "class": "IRSHousingModification"
+                  },
+                  {
+                     "Broadcast_Event": "Received_IRS",
+                     "class": "BroadcastEvent"
+                  }
+               ],
+               "class": "MultiInterventionDistributor"
+            },
+            "Target_Age_Max": 50,
+            "Target_Age_Min": 11,
+            "Target_Demographic": "ExplicitAgeRanges",
+            "Target_Residents_Only": 1,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 366,
+         "class": "CampaignEvent"
+      },
+      {
+         "Event_Coordinator_Config": {
+            "Demographic_Coverage": 0.6,
+            "Intervention_Config": {
+               "Intervention_List": [
+                  {
+                     "Blocking_Config": {
+                        "Decay_Time_Constant": 730,
+                        "Initial_Effect": 0.0,
+                        "class": "WaningEffectExponential"
+                     },
+                     "Cost_To_Consumer": 1,
+                     "Killing_Config": {
+                        "Box_Duration": 60,
+                        "Decay_Time_Constant": 120,
+                        "Initial_Effect": 0.6,
+                        "class": "WaningEffectBoxExponential"
+                     },
+                     "class": "IRSHousingModification"
+                  },
+                  {
+                     "Broadcast_Event": "Received_IRS",
+                     "class": "BroadcastEvent"
+                  }
+               ],
+               "class": "MultiInterventionDistributor"
+            },
+            "Target_Age_Max": 125,
+            "Target_Age_Min": 51,
+            "Target_Demographic": "ExplicitAgeRanges",
+            "Target_Residents_Only": 1,
+            "class": "StandardInterventionDistributionEventCoordinator"
+         },
+         "Nodeset_Config": {
+            "class": "NodeSetAll"
+         },
+         "Start_Day": 366,
+         "class": "CampaignEvent"
+      }
+   ],
+   "Use_Defaults": 1
+}
