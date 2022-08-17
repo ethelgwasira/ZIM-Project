@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09101005-a669-4e2b-b5ff-1f98a7124d62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/analyze_exampleSim_Zimbabwew3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_exampleSim_Zimbabwew3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mutasa_PickupA_2001-2010.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mutasa_PickupB_2011-2014.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mutasa_PickupC_2015-2020.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_Zimbabwe_Pickup_50.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vector_species_analyzer_Zimbabwe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyze_exampleSim_Zimbabwe.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyze_exampleSim_Zimbabwe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyze_exampleSim_Zimbabwe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyze_exampleSim_Zimbabwew3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyze_exampleSim_Zimbabwew3a.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyze_exampleSim_Zimbabwew3c.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analyzer_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyzer_collection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experiments/ZBOOK_FE_2022_example_Mozambique_smallpop___2022_06_13_18_33_59_638912/Simulation_M9VTUY26/StdErr.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/experiments/ZBOOK_FE_2022_example_Mozambique_smallpop___2022_06_13_18_33_59_638912/Simulation_M9VTUY26/StdOut.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/experiments/ZBOOK_FE_2022_example_Mozambique_smallpop___2022_06_13_18_33_59_638912/Simulation_M9VTUY26/campaign.json" beforeDir="false" />
@@ -15,7 +22,21 @@
       <change beforePath="$PROJECT_DIR$/experiments/ZBOOK_FE_2022_example_Mozambique_smallpop___2022_06_13_18_33_59_638912/Simulation_M9VTUY26/output/InsetChart.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/experiments/ZBOOK_FE_2022_example_Mozambique_smallpop___2022_06_13_18_33_59_638912/Simulation_M9VTUY26/output/MalariaSummaryReport_Annual_Agebin.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/experiments/ZBOOK_FE_2022_example_Mozambique_smallpop___2022_06_13_18_33_59_638912/Simulation_M9VTUY26/status.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_exampleSim_Zimbabwe.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_exampleSim_Zimbabwe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_input_files_Zimbabwe.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_input_files_Zimbabwe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Mozambique/Mozambique_2.5arcmin_demographics.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/Mozambique/Mozambique_2.5arcmin_demographics.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_air_temperature_daily.bin" beforeDir="false" afterPath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_air_temperature_daily.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_air_temperature_daily.bin.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_air_temperature_daily.bin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_rainfall_daily.bin" beforeDir="false" afterPath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_rainfall_daily.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_rainfall_daily.bin.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_rainfall_daily.bin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_relative_humidity_daily.bin" beforeDir="false" afterPath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_relative_humidity_daily.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_relative_humidity_daily.bin.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/Mozambique/Mozambique_30arcsec_relative_humidity_daily.bin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Mozambique/Mozambique_demographics.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_exampleSim_Zimbabwe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_exampleSim_Zimbabwetest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_exampleSim_Zimbabwew3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_exampleSim_Zimbabwew3a.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_exampleSim_Zimbabwew3c.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simtools.ini" beforeDir="false" afterPath="$PROJECT_DIR$/simtools.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_Mozambique_smallpop/Agebin_PfPR_ClinicalIncidence.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_Mozambique_smallpop/Agebin_PfPR_ClinicalIncidence_annual.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_Mozambique_smallpop/All_Age_InsetChart.csv" beforeDir="false" />
@@ -24,10 +45,32 @@
       <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_Zambia_smallpop/Agebin_PfPR_ClinicalIncidence_annual.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_Zambia_smallpop/All_Age_InsetChart.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_Zambia_smallpop/InsetChart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/Agebin_PfPR_ClinicalIncidence.png" beforeDir="false" afterPath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/Agebin_PfPR_ClinicalIncidence.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/Agebin_PfPR_ClinicalIncidence_annual.csv" beforeDir="false" afterPath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/Agebin_PfPR_ClinicalIncidence_annual.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/All_Age_InsetChart.csv" beforeDir="false" afterPath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/All_Age_InsetChart.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/InsetChart.png" beforeDir="false" afterPath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/InsetChart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_w3a/Agebin_PfPR_ClinicalIncidence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_w3a/Agebin_PfPR_ClinicalIncidence_annual.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_w3a/All_Age_InsetChart.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_w3a/Event_Count.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_w3a/Events.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_FE_2022_example_w3a/InsetChart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/Agebin_PfPR_ClinicalIncidence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/Agebin_PfPR_ClinicalIncidence_annual.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/All_Age_InsetChart.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwe/InsetChart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwetest/Agebin_PfPR_ClinicalIncidence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwetest/Agebin_PfPR_ClinicalIncidence_annual.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwetest/All_Age_InsetChart.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwetest/InsetChart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3a/Agebin_PfPR_ClinicalIncidence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3a/Agebin_PfPR_ClinicalIncidence_annual.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3a/All_Age_InsetChart.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3a/Event_Count.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3a/Events.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3a/InsetChart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3c/Agebin_PfPR_ClinicalIncidence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3c/Agebin_PfPR_ClinicalIncidence_annual.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3c/All_Age_InsetChart.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3c/Event_Count.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3c/Events.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulation_outputs/ZBOOK_ZIM-project_Zimbabwew3c/InsetChart.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,22 +91,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ZBOOK/Documents/ZIM-project",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ZBOOK/Documents/Zimbabwe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ZBOOK\Documents\Zimbabwe" />
       <recent name="C:\Users\ZBOOK\Documents\ZIM-project" />
       <recent name="C:\Users\ZBOOK\Documents\faculty-enrich-2022-examples" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.analyze_exampleSim_Zimbabwew3c">
-    <configuration name="analyze_exampleSim_Zimbabwe" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Mutasa_select">
+    <configuration name="Mutasa_PickupB_2011-2014" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZIM-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,7 +119,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyze_exampleSim_Zimbabwe.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mutasa_PickupB_2011-2014.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +128,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="analyze_exampleSim_Zimbabwew3a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Mutasa_analyser_calibration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZIM-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,7 +140,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyze_exampleSim_Zimbabwew3a.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mutasa_analyser_calibration.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="analyze_exampleSim_Zimbabwew3c" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Mutasa_calibration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZIM-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,7 +161,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyze_exampleSim_Zimbabwew3c.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mutasa_calibration.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,7 +170,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_exampleSim_Zimbabwew3a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Mutasa_select" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZIM-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,7 +182,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_exampleSim_Zimbabwew3a.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Mutasa_select.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,7 +191,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_exampleSim_Zimbabwew3c" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="select_cal_w7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ZIM-project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -159,7 +203,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_exampleSim_Zimbabwew3c.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/select_cal_w7.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.analyze_exampleSim_Zimbabwew3c" />
-        <item itemvalue="Python.run_exampleSim_Zimbabwew3c" />
-        <item itemvalue="Python.analyze_exampleSim_Zimbabwew3a" />
-        <item itemvalue="Python.run_exampleSim_Zimbabwew3a" />
-        <item itemvalue="Python.analyze_exampleSim_Zimbabwe" />
+        <item itemvalue="Python.Mutasa_select" />
+        <item itemvalue="Python.Mutasa_analyser_calibration" />
+        <item itemvalue="Python.Mutasa_PickupB_2011-2014" />
+        <item itemvalue="Python.Mutasa_calibration" />
+        <item itemvalue="Python.select_cal_w7" />
       </list>
     </recent_temporary>
   </component>

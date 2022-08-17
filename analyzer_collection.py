@@ -18,7 +18,7 @@ class InsetChartAnalyzer(BaseAnalyzer):
         else:
             return datetime.datetime.strptime(str(x), '%j').month
 
-    def __init__(self, expt_name, sweep_variables=None, channels=None, working_dir=".", start_year=2022):
+    def __init__(self, expt_name, sweep_variables=None, channels=None, working_dir=".", start_year=2011):
         super(InsetChartAnalyzer, self).__init__(working_dir=working_dir, filenames=["output/InsetChart.json"])
         self.sweep_variables = sweep_variables or ["Run_Number"]
         self.inset_channels = channels or ['Statistical Population', 'New Clinical Cases', 'New Severe Cases',
@@ -30,9 +30,9 @@ class InsetChartAnalyzer(BaseAnalyzer):
         simdata = pd.DataFrame({x: data[self.filenames[0]]['Channels'][x]['Data'] for x in self.inset_channels})
         simdata['Time'] = simdata.index
         simdata['Day'] = simdata['Time'] % 365
-        simdata['Year'] = simdata['Time'].apply(lambda x: int(x / 365) + 2022)
+        simdata['Year'] = simdata['Time'].apply(lambda x: int(x / 365) + self.start_year)
         simdata['date'] = simdata.apply(
-            lambda x: datetime.date(int(x['Year']), 1, 1) + datetime.timedelta(x['Day'] - 1), axis=1)
+            lambda x: datetime.date(int(x['Year']), 1, 1) + datetime.timedelta(int(x['Day']) - 1), axis=1)
 
         for sweep_var in self.sweep_variables:
             if sweep_var in simulation.tags.keys():
@@ -63,8 +63,8 @@ MalariaSummaryReport Analyzer
 # AnnualAgebinPfPRAnalyzer
 class AnnualAgebinPfPRAnalyzer(BaseAnalyzer):
 
-    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2022,
-                 end_year=2025, burnin=None):
+    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2011,
+                 end_year=2010, burnin=None):
 
         super(AnnualAgebinPfPRAnalyzer, self).__init__(working_dir=working_dir,
                                                        filenames=[
@@ -136,8 +136,8 @@ class AnnualAgebinPfPRAnalyzer(BaseAnalyzer):
 # MonthlyAgebinPfPRAnalyzer
 class MonthlyAgebinPfPRAnalyzer(BaseAnalyzer):
 
-    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2020,
-                 end_year=2023,
+    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2011,
+                 end_year=2014,
                  burnin=None, filter_exists=False):
 
         super(MonthlyAgebinPfPRAnalyzer, self).__init__(working_dir=working_dir,
@@ -235,7 +235,7 @@ class MonthlyAgebinPfPRAnalyzer(BaseAnalyzer):
 # MonthlyPfPRAnalyzerU5
 class MonthlyPfPRAnalyzerU5(BaseAnalyzer):
 
-    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2020, end_year=2023,
+    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2011, end_year=2014,
                  burnin=None, filter_exists=False):
 
         super(MonthlyPfPRAnalyzerU5, self).__init__(working_dir=working_dir,
@@ -314,7 +314,7 @@ class MonthlyPfPRAnalyzerU5(BaseAnalyzer):
 
 class MonthlyPfPRAnalyzerU10(BaseAnalyzer):
 
-    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2020, end_year=2023,
+    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2011, end_year=2014,
                  burnin=None, filter_exists=False):
 
         super(MonthlyPfPRAnalyzerU10, self).__init__(working_dir=working_dir,
@@ -389,7 +389,7 @@ class MonthlyPfPRAnalyzerU10(BaseAnalyzer):
 # WeeklyPfPRAnalyzerU5
 class WeeklyPfPRAnalyzerU5(BaseAnalyzer):
 
-    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2020, end_year=2023,
+    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2011, end_year=2014,
                  burnin=None, filter_exists=False):
 
         super(WeeklyPfPRAnalyzerU5, self).__init__(working_dir=working_dir,
@@ -479,7 +479,7 @@ class IndividualEventsAnalyzer(BaseAnalyzer):
         else:
             return datetime.datetime.strptime(str(x), '%j').month
 
-    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2022,
+    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2011,
                  selected_year=None, filter_exists=False):
         super(IndividualEventsAnalyzer, self).__init__(working_dir=working_dir,
                                                        filenames=["output/ReportEventRecorder.csv"]
@@ -547,7 +547,7 @@ class TransmissionReport(BaseAnalyzer):
         else:
             return datetime.datetime.strptime(str(x), '%j').month
 
-    def __init__(self, expt_name, channels=None, sweep_variables=None, working_dir='./', start_year=2022,
+    def __init__(self, expt_name, channels=None, sweep_variables=None, working_dir='./', start_year=2011,
                  selected_year=None, daily_report=False, monthly_report=False, filter_exists=False):
         super(TransmissionReport, self).__init__(working_dir=working_dir,
                                                  filenames=["output/ReportMalariaFiltered.json"])
@@ -650,7 +650,7 @@ class BednetUsageAnalyzer(BaseAnalyzer):
         else:
             return datetime.datetime.strptime(str(x), '%j').month
 
-    def __init__(self, expt_name, channels=None, sweep_variables=None, working_dir='./', start_year=2022,
+    def __init__(self, expt_name, channels=None, sweep_variables=None, working_dir='./', start_year=2011,
                  selected_year=None, filter_exists=False):
         super(BednetUsageAnalyzer, self).__init__(working_dir=working_dir,
                                                   filenames=["output/ReportEventCounter.json",
@@ -735,7 +735,7 @@ class ReceivedCampaignAnalyzer(BaseAnalyzer):
         else:
             return datetime.datetime.strptime(str(x), '%j').month
 
-    def __init__(self, expt_name, channels=None, sweep_variables=None, working_dir='./', start_year=2022):
+    def __init__(self, expt_name, channels=None, sweep_variables=None, working_dir='./', start_year=2011):
         super(ReceivedCampaignAnalyzer, self).__init__(working_dir=working_dir,
                                                        filenames=["output/ReportEventCounter.json",
                                                                   "output/InsetChart.json"])
@@ -750,8 +750,9 @@ class ReceivedCampaignAnalyzer(BaseAnalyzer):
         simdata['Population'] = data[self.filenames[1]]['Channels']['Statistical Population']['Data']
         simdata['Time'] = simdata.index
         simdata['Day'] = simdata['Time'] % 365
-        simdata['Month'] = simdata['Day'].apply(lambda x: self.monthparser((x + 1) % 365))
-        simdata['Year'] = simdata['Time'].apply(lambda x: int(x / 365) + self.start_year)
+        simdata['Year'] = simdata['Time'].apply(lambda x: int(x / 365) + 2011)
+        simdata['date'] = simdata.apply(
+            lambda x: datetime.date(int(x['Year']), 1, 1) + datetime.timedelta(int(x['Day']) - 1), axis=1)
 
         for sweep_var in self.sweep_variables:
             if sweep_var in simulation.tags.keys():
@@ -771,7 +772,6 @@ class ReceivedCampaignAnalyzer(BaseAnalyzer):
             return
 
         adf = pd.concat(selected).reset_index(drop=True)
-        adf['date'] = adf.apply(lambda x: datetime.date(int(x['Year']), int(x['Month']), 1), axis=1)
 
         if not os.path.exists(os.path.join(self.working_dir, self.expt_name)):
             os.mkdir(os.path.join(self.working_dir, self.expt_name))
@@ -798,8 +798,8 @@ class MonthlyTreatedCasesAnalyzer(BaseAnalyzer):
         else:
             return datetime.datetime.strptime(str(x), '%j').month
 
-    def __init__(self, expt_name, channels=None, sweep_variables=None, working_dir=".", start_year=2010,
-                 end_year=2020, filter_exists=False):
+    def __init__(self, expt_name, channels=None, sweep_variables=None, working_dir=".", start_year=2011,
+                 end_year=2010, filter_exists=False):
         super(MonthlyTreatedCasesAnalyzer, self).__init__(working_dir=working_dir,
                                                           filenames=["output/ReportEventCounter.json",
                                                                      "output/ReportMalariaFiltered.json"]
@@ -883,7 +883,7 @@ class MonthlySevereTreatedByAgeAnalyzer(BaseAnalyzer):
             return datetime.datetime.strptime(str(x), '%j').month
 
     def __init__(self, expt_name, event_name='Received_Severe_Treatment', agebins=None,
-                 sweep_variables=None, working_dir=".", start_year=2010, end_year=2020):
+                 sweep_variables=None, working_dir=".", start_year=2011, end_year=2014):
         super(MonthlySevereTreatedByAgeAnalyzer, self).__init__(working_dir=working_dir,
                                                                 filenames=["output/ReportEventRecorder.csv"]
                                                                 )
@@ -1027,7 +1027,7 @@ class MonthlyAgebinSevereTreatedAnalyzer(BaseAnalyzer):
             return datetime.datetime.strptime(str(x), '%j').month
 
     def __init__(self, expt_name, event_name='Received_Severe_Treatment', agebins=None,
-                 sweep_variables=None, IP_variable=None, working_dir=".", start_year=2000, end_year=2020,
+                 sweep_variables=None, IP_variable=None, working_dir=".", start_year=2011, end_year=2014,
                  filter_exists=False):
         super(MonthlyAgebinSevereTreatedAnalyzer, self).__init__(working_dir=working_dir,
                                                                  filenames=["output/ReportEventRecorder.csv"]
@@ -1191,12 +1191,12 @@ With IP filter
 
 class MonthlyPfPRAnalyzerU5IP(BaseAnalyzer):
 
-    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2020, end_year=2023,
+    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2011, end_year=2014,
                  burnin=None, filter_exists=False, ipfilter=''):
 
         super(MonthlyPfPRAnalyzerU5IP, self).__init__(working_dir=working_dir,
                                                     filenames=[
-                                                        f"output/MalariaSummaryReport_Monthly_U5{ipfilter}_{x}.json"
+                                                        f"output/MalariaSummaryReport_Monthly_U5{ipfilter}{x}.json"
                                                         for x in range(start_year, end_year)]
                                                     )
         self.sweep_variables = sweep_variables or ["Run_Number"]
@@ -1271,8 +1271,8 @@ class MonthlyPfPRAnalyzerU5IP(BaseAnalyzer):
 
 class MonthlyAgebinPfPRAnalyzerIP(BaseAnalyzer):
 
-    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2020,
-                 end_year=2023, ipfilter='',
+    def __init__(self, expt_name, sweep_variables=None, working_dir='./', start_year=2011,
+                 end_year=2010, ipfilter='',
                  burnin=None, filter_exists=False):
 
         super(MonthlyAgebinPfPRAnalyzerIP, self).__init__(working_dir=working_dir,

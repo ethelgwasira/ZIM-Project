@@ -48,8 +48,8 @@ if __name__ == '__main__':
     if not os.path.exists(inputs_path):
         os.mkdir(inputs_path)
 
-    df = pd.DataFrame(data={'nodeid': [1], 'population': [1400], 'Village': ['Mutasa'],
-                            'lat': [-18.6155], 'lon': [32.6730]})
+    df = pd.DataFrame(data={'nodeid': [1], 'population': [2000], 'Village': ['Mutasa'],
+                            'lat': [-18.39946], 'lon': [32.94505]})
                             #'lat': [-16.9151], 'lon': [32.6277]})
                              #'lat': [5.760759295941768], 'lon': [-0.4473415119456551]})
     demo_fname = os.path.join(inputs_path, 'Mozambique_demographics.json')
